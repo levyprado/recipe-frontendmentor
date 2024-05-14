@@ -1,0 +1,165 @@
+:root {
+    /* fonts */
+    --font-primary: "Outfit", sans-serif;
+    --font-secondary: "Young Serif", serif;
+
+    /* colors */
+    --color-nutmeg: hsl(14, 45%, 36%);
+    --color-raspberry: hsl(332, 51%, 32%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-rose: hsl(330, 100%, 98%);
+    --color-eggshell: hsl(30, 54%, 90%);
+    --color-lightgrey: hsl(30, 18%, 87%);
+    --color-brown: hsl(30, 10%, 34%);
+    --color-charcoal: hsl(24, 5%, 18%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
+    background-color: var(--color-eggshell);
+}
+
+img,
+video,
+picture,
+canvas {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.main {
+    background-color: var(--color-white);
+}
+
+.header__img {
+    width: 100vw;
+    height: auto;
+}
+
+/* header */
+
+.header {
+    margin-top: 1rem;
+}
+
+.header__title {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+/* preparation */
+
+.preparation {
+    background-color: var(--color-rose);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 2rem;
+}
+
+.preparation__title {
+    color: var(--color-raspberry);
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.preparation__item--title {
+    font-weight: 600;
+}
+
+/* ingredients */
+.ingredients {
+    margin-top: 2rem;
+}
+
+/* instructions */
+.instructions__item {
+    line-height: calc(1em + 0.5rem);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.instructions__item::marker {
+    color: var(--color-raspberry);
+}
+
+.instructions__item--fweight300 {
+    font-weight: 300;
+}
+
+/* nutrition */
+.nutrition__table {
+    margin-left: 2rem;
+}
+
+.nutrition__table-data {
+    padding-bottom: 0.875rem;
+}
+
+.nutrition__table-data:not(:last-child) {
+    padding-right: 3rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000;
+}
+
+.nutrition__table:last-child {
+    font-weight: 600;
+    color: var(--color-nutmeg);
+}
+
+@media (min-width: 475px) {
+    .container {
+        max-width: 475px;
+    }
+
+    .nutrition__table-data:not(:last-child) {
+        padding-right: 12rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .container,
+    .main__container {
+        max-width: 640px;
+    }
+
+    .container {
+        padding-inline: 0;
+    }
+
+    .header__img {
+        border-radius: 12px;
+    }
+
+    .main {
+        padding: 2.5rem;
+        border-radius: 10px;
+        margin-block: 5rem;
+    }
+
+    .nutrition__table-data:not(:last-child) {
+        padding-right: 14rem;
+    }
+}

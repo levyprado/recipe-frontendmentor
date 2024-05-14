@@ -1,0 +1,38 @@
+.section__title {
+    font-family: var(--font-secondary);
+    font-size: 1.6rem;
+    color: var(--color-nutmeg);
+    font-weight: 500;
+}
+
+.section__description {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: calc(1em + 0.5rem);
+    margin-block: 1rem;
+}
+
+.section__list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.3em;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.section__item {
+    font-size: 1rem;
+    font-weight: 300;
+    padding-left: 1rem;
+    line-height: calc(1em + 0.5rem);
+}
+
+.section__item::marker {
+    color: var(--color-raspberry);
+}
+
+.separator {
+    width: 100%;
+    border: 1px solid var(--color-lightgrey);
+    margin-block: 1.5rem;
+}
